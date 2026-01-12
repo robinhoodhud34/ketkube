@@ -17,12 +17,12 @@ jobs:
     - name: Push image
       run: |
         docker tag myapp:${{ github.sha }} rghud/myapp:${{ github.sha }}
-        docker push YOURUSERNAME/myapp:${{ github.sha }}
+        docker push rghud/myapp:${{ github.sha }}
     - name: Update K8s manifest
       run: |
         sed -i "s|image: .*|image: robinhoodhud34/myapp:${{ github.sha }}|" k8s/deployment.yaml
         git config user.name "gitops-bot"
-        git config user.email "bot@example.com"
+        git config user.email "robinhoodhudhud3@gmail.com"
         git add k8s/deployment.yaml
         git commit -m "chore: bump image to ${{ github.sha }}"
         git push
