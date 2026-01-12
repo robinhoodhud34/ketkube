@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: YOURUSERNAME/myapp:latest  # Updated by GitHub Actions
+        image: rghud/myapp:latest  # Updated by GitHub Actions
         ports:
         - containerPort: 3000
